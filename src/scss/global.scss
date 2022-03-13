@@ -1,0 +1,12 @@
+div.container {
+    // margin-left: 24px;
+    margin: auto 24px;
+    padding-left: 0%;
+    padding-right: 0%;
+    max-width: 100%;
+}
+
+// div but not navbar
+div.container-fluid {
+    background-color: rgb(242,242,242);
+}

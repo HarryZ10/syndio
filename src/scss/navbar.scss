@@ -1,0 +1,42 @@
+
+.navbar {
+    height: 70px;
+    background-color: #373737 !important;
+}
+
+.dropdown {
+    height: 40px;
+    width: 200px;
+}
+
+// active dropdown
+#dropdown-basic:hover {
+    outline: 1px #0D8B7F;
+    background-color: #262626;
+}
+
+#dropdown-basic::after {
+    display: none;
+}
+
+#dropdown-basic {
+    padding: 12px;
+    background-color: #303030;
+    border-radius: 4px;
+    border: 0px;
+}
+
+#icon-down-arrow {
+    // flex to the right
+    float: right;
+}
+
+#dropdown-title {
+    // flex to the left
+    float: left;
+    font-size: 0.86rem;
+    font-weight: 630;
+
+    // align vertically
+    justify-content: center;
+}
