@@ -6,16 +6,10 @@ div.container {
     max-width: 100%;
 }
 
-// div but not navbar
-// div.container-fluid {
-//     background-color: rgb(242,242,242);
-// }
-
 .col-lg {
     height: 130px;
     width: 40px;
 }
-
 
 @media screen and (max-width: 998px) {
     .col-lg {
