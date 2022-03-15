@@ -50,9 +50,7 @@ render() {
                             <Tab activeTab={activeTab} key={label} label={label} onClick={onClickTabItem}/>
                         );
                     })}
-                </ol>
-
-            
+                </ol>     
             </div>
             {/* tabContent is the container for the content of the active tab */}
             <div className="tab-content">

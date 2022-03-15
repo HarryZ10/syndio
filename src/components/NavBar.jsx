@@ -2,10 +2,13 @@ import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+import Dropdown from 'react-bootstrap/Dropdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+
+import HeaderDropdowns from './api/GetHeaderDropdowns';
 import SyndioLogo from '../assets/images/syndio-logo.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+
 
 const faAngleDownElement = <FontAwesomeIcon className="fa-lg" icon={faAngleDown} />
 
@@ -14,6 +17,9 @@ const faAngleDownElement = <FontAwesomeIcon className="fa-lg" icon={faAngleDown}
  * @returns {JSX}
  */
 const NavBar = () => {
+
+    const dropdownData = HeaderDropdowns();
+
     return (
         <div>
             <Navbar className="navbar">
@@ -29,10 +35,18 @@ const NavBar = () => {
                     </Navbar.Brand>
 
                     <Nav>
-                        <DropdownToggle className="dropdown" id="dropdown-basic">
-                            <span id="dropdown-title">Group 1</span>
-                            <span id="icon-down-arrow">{faAngleDownElement}</span>
-                        </DropdownToggle>
+                        <Dropdown>
+                            <Dropdown.Toggle className="dropdown" id="dropdown-basic">
+                                <span id="dropdown-title">Group 1</span>
+                                <span id="icon-down-arrow">{faAngleDownElement}</span>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                {dropdownData && dropdownData.map(dropdown => (
+                                    <Dropdown.Item key={dropdown.id}>{dropdown.label}</Dropdown.Item>
+                                ))}
+                            </Dropdown.Menu>
+                    </Dropdown>
                     </Nav>
                 </Container>
 

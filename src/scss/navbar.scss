@@ -40,3 +40,25 @@
     // align vertically
     justify-content: center;
 }
+
+@media screen and (max-width: 382px) {
+    .dropdown {
+        width: 100%;
+    }
+
+    #dropdown-title {
+        font-size: 0.66rem;
+    }
+
+    #icon-down-arrow {
+        // flex to the right
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 260px) {
+    .dropdown {
+        display: none;
+    }
+}
