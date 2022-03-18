@@ -1,5 +1,9 @@
 ## Available Scripts
 
+### `npm install --save`
+
+Set up the modules and project
+
 ### `npm start`
 
 Runs the app in the development mode.\
